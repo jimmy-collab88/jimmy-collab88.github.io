@@ -2,83 +2,77 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>MindAR 五個目標互動體驗</title>
+    <title>MindAR 修正比例的多目標互動體驗</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
     
     <style>
-        /* 讓 AR 畫面全屏顯示 */
         body { margin: 0; }
     </style>
 </head>
 <body>
 
     <a-assets>
-        <img id="content_a" src="./image-a.png"> 
-        <img id="content_b" src="./image-b.png"> 
-        <img id="content_c" src="./image-c.png"> 
-        <img id="content_d" src="./image-d.png"> 
-        <img id="content_e" src="./image-e.png"> 
+        <img id="contentA" src="./image-a.png">
+        <img id="contentB" src="./image-b.png">
+        <img id="contentC" src="./image-c.png">
+        <img id="contentD" src="./image-d.png">
+        <img id="contentE" src="./image-e.png">
     </a-assets>
 
     <a-scene 
-        mindar-image="imageTargetSrc: ./targets.mind; maxTrack: 5" 
+        mindar-image="imageTargetSrc: ./targets.mind;" 
         color-space="sRGB" 
         renderer="colorManagement: true, physicallyCorrectLights"
         vr-mode-ui="enabled: false" 
         device-orientation-permission-ui="enabled: false">
-        
+
         <a-camera look-controls="enabled: false"></a-camera>
 
         <a-entity mindar-image-target="targetIndex: 0">
             <a-image 
-                src="#content_a" 
+                src="#contentA" 
                 position="0 0 0.1" 
-                height="1" 
-                width="1.5"
-                rotation="0 0 0">
+                width="1.5" 
+                height="1.2078">
             </a-image>
         </a-entity>
 
         <a-entity mindar-image-target="targetIndex: 1">
             <a-image 
-                src="#content_b" 
+                src="#contentB" 
                 position="0 0 0.1" 
-                height="1" 
-                width="1.5"
-                rotation="0 0 0">
+                width="1.5" 
+                height="1.2066">
             </a-image>
         </a-entity>
         
         <a-entity mindar-image-target="targetIndex: 2">
             <a-image 
-                src="#content_c" 
+                src="#contentC" 
                 position="0 0 0.1" 
-                height="1" 
-                width="1.5"
-                rotation="0 0 0">
+                width="1.5" 
+                height="1.8115">
             </a-image>
         </a-entity>
-        
+
         <a-entity mindar-image-target="targetIndex: 3">
             <a-image 
-                src="#content_d" 
+                src="#contentD" 
                 position="0 0 0.1" 
-                height="1" 
-                width="1.5"
-                rotation="0 0 0">
+                width="1.5" 
+                height="1.8090">
             </a-image>
         </a-entity>
-        
+
         <a-entity mindar-image-target="targetIndex: 4">
             <a-image 
-                src="#content_e" 
+                src="#contentE" 
                 position="0 0 0.1" 
-                height="1" 
-                width="1.5"
-                rotation="0 0 0">
+                width="1.5" 
+                height="0.6586">
             </a-image>
         </a-entity>
 
