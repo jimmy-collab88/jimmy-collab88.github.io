@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>MindAR 五目標疊層與單圖效果合併</title>
+    <title>MindAR 疊層、3D與2D追蹤整合</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
@@ -15,13 +15,15 @@
 <body>
 
     <a-assets>
+        <a-asset-item id="squareModel" src="./square.glb"></a-asset-item> 
+
         <img id="bg1" src="./background-1.png">
         <img id="bg2" src="./background-2.png">
         <img id="main1" src="./main_character-1.png">
         <img id="main2" src="./main_character-2.png">
         <img id="shadow" src="./shadow_effect.png">
 
-        <img id="contentB" src="./image-b.png">
+        <img id="contentB" src="./image-b.png"> 
         <img id="contentC" src="./image-c.png">
         <img id="contentD" src="./image-d.png">
         <img id="contentE" src="./image-e.png">
@@ -37,7 +39,6 @@
         <a-camera look-controls="enabled: false"></a-camera>
 
         <a-entity mindar-image-target="targetIndex: 0">
-            
             <a-image src="#bg1" position="0 0 0.10" width="1.8" height="1.4494" rotation="0 0 0"></a-image>
 
             <a-image src="#bg2" position="0 0 0.20" width="1.7" height="1.3688" rotation="0 0 0"></a-image>
@@ -47,13 +48,20 @@
             <a-image src="#main2" position="0 0 0.40" width="1.3" height="1.0468" rotation="0 0 0"></a-image>
 
             <a-image src="#shadow" position="0 0 0.50" width="1.1" height="0.8857" rotation="0 0 0"></a-image>
-
         </a-entity>
 
 
         <a-entity mindar-image-target="targetIndex: 1">
-            <a-image src="#contentB" position="0 0 0.1" width="1.5" height="1.2066"></a-image>
+            
+            <a-gltf-model 
+                src="#squareModel"         
+                position="0 0 0.1"          
+                rotation="0 0 0"            
+                scale="1 1 1">              
+            </a-gltf-model>
+
         </a-entity>
+
 
         <a-entity mindar-image-target="targetIndex: 2">
             <a-image src="#contentC" position="0 0 0.1" width="1.5" height="1.8115"></a-image>
@@ -70,5 +78,3 @@
     </a-scene>
 </body>
 </html>
-
-
