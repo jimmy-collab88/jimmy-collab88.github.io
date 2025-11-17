@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>MindAR 修正比例的多目標互動體驗</title>
+    <title>MindAR 五目標疊層與單圖效果合併</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
@@ -15,7 +15,12 @@
 <body>
 
     <a-assets>
-        <img id="contentA" src="./image-a.png">
+        <img id="bg1" src="./Background-1.png">
+        <img id="bg2" src="./Background-2.png">
+        <img id="main1" src="./main_character-1.png">
+        <img id="main2" src="./main_character-2.png">
+        <img id="shadow" src="./shadow_effect.png">
+
         <img id="contentB" src="./image-b.png">
         <img id="contentC" src="./image-c.png">
         <img id="contentD" src="./image-d.png">
@@ -32,48 +37,34 @@
         <a-camera look-controls="enabled: false"></a-camera>
 
         <a-entity mindar-image-target="targetIndex: 0">
-            <a-image 
-                src="#contentA" 
-                position="0 0 0.1" 
-                width="1.5" 
-                height="1.2078">
-            </a-image>
+            
+            <a-image src="#bg1" position="0 0 0.05" width="1.8" height="1.4494" rotation="0 0 0"></a-image>
+
+            <a-image src="#bg2" position="0 0 0.10" width="1.7" height="1.3688" rotation="0 0 0"></a-image>
+
+            <a-image src="#main1" position="0 0 0.15" width="1.5" height="1.2078" rotation="0 0 0"></a-image>
+
+            <a-image src="#main2" position="0 0 0.20" width="1.3" height="1.0468" rotation="0 0 0"></a-image>
+
+            <a-image src="#shadow" position="0 0 0.25" width="1.1" height="0.8857" rotation="0 0 0"></a-image>
+
         </a-entity>
 
+
         <a-entity mindar-image-target="targetIndex: 1">
-            <a-image 
-                src="#contentB" 
-                position="0 0 0.1" 
-                width="1.5" 
-                height="1.2066">
-            </a-image>
+            <a-image src="#contentB" position="0 0 0.1" width="1.5" height="1.2066"></a-image>
         </a-entity>
-        
+
         <a-entity mindar-image-target="targetIndex: 2">
-            <a-image 
-                src="#contentC" 
-                position="0 0 0.1" 
-                width="1.5" 
-                height="1.8115">
-            </a-image>
+            <a-image src="#contentC" position="0 0 0.1" width="1.5" height="1.8115"></a-image>
         </a-entity>
 
         <a-entity mindar-image-target="targetIndex: 3">
-            <a-image 
-                src="#contentD" 
-                position="0 0 0.1" 
-                width="1.5" 
-                height="1.8090">
-            </a-image>
+            <a-image src="#contentD" position="0 0 0.1" width="1.5" height="1.8090"></a-image>
         </a-entity>
 
         <a-entity mindar-image-target="targetIndex: 4">
-            <a-image 
-                src="#contentE" 
-                position="0 0 0.1" 
-                width="1.5" 
-                height="0.6586">
-            </a-image>
+            <a-image src="#contentE" position="0 0 0.1" width="1.5" height="0.6586"></a-image>
         </a-entity>
 
     </a-scene>
