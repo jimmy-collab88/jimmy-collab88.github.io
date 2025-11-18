@@ -17,11 +17,12 @@
     <a-assets>
         <a-asset-item id="squareModel" src="./square.glb"></a-asset-item> 
 
-        <img id="bg1" src="./background-1.png">
-        <img id="bg2" src="./background-2.png">
-        <img id="main1" src="./main_character-1.png">
-        <img id="main2" src="./main_character-2.png">
-        <img id="shadow" src="./shadow_effect.png">
+        <img id="layerBg1" src="./background-1.png">
+        <img id="layerBg2" src="./background-2.png">
+        <img id="layerShadow1" src="./shadow_effect-1.png">
+        <img id="layerShadow2" src="./shadow_effect-2.png">
+        <img id="layerMain1" src="./main_character-1.png">
+        <img id="layerMain2" src="./main_character-2.png">
 
         <img id="contentB" src="./image-b.png"> 
         <img id="contentC" src="./image-c.png">
@@ -39,15 +40,17 @@
         <a-camera look-controls="enabled: false"></a-camera>
 
         <a-entity mindar-image-target="targetIndex: 0">
-            <a-image src="#bg1" position="0 0 0.10" width="1.8" height="1.4494" rotation="0 0 0"></a-image>
+            <a-image src="#layerBg1" position="0 0 0.10" width="2.0" height="1.6091" rotation="0 0 0"></a-image>
 
-            <a-image src="#bg2" position="0 0 0.20" width="1.7" height="1.3688" rotation="0 0 0"></a-image>
+            <a-image src="#layerBg2" position="0 0 0.20" width="1.8" height="1.4482" rotation="0 0 0"></a-image>
+            
+            <a-image src="#layerShadow1" position="0 0 0.30" width="1.6" height="1.2873" rotation="0 0 0"></a-image>
+            
+            <a-image src="#layerShadow2" position="0 0 0.40" width="1.4" height="1.1263" rotation="0 0 0"></a-image>
 
-            <a-image src="#main1" position="0 0 0.30" width="1.5" height="1.2078" rotation="0 0 0"></a-image>
+            <a-image src="#layerMain1" position="0 0 0.50" width="1.2" height="0.9654" rotation="0 0 0"></a-image>
 
-            <a-image src="#main2" position="0 0 0.40" width="1.3" height="1.0468" rotation="0 0 0"></a-image>
-
-            <a-image src="#shadow" position="0 0 0.50" width="1.1" height="0.8857" rotation="0 0 0"></a-image>
+            <a-image src="#layerMain2" position="0 0 0.60" width="1.0" height="0.8045" rotation="0 0 0"></a-image>
         </a-entity>
 
 
@@ -78,6 +81,7 @@
     </a-scene>
 </body>
 </html>
+
 
 
 
