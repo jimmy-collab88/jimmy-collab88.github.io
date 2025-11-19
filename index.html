@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>MindAR 六層疊層、3D與2D追蹤整合</title>
+    <title>MindAR 完整整合：六層、3D、2D 與兩層疊層</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
@@ -23,6 +23,9 @@
         <img id="shadow2" src="./iceflower/shadow_effect-2.png">      
         <img id="main1" src="./iceflower/main_character-1.png">
         <img id="main2" src="./iceflower/main_character-2.png">
+        
+        <img id="saltFG" src="./salt/imagesaltar-1.png">
+        <img id="saltBG" src="./salt/imagesaltar-2.png">
 
         <img id="contentB" src="./image-b.png"> 
         <img id="contentC" src="./image-c.png">
@@ -59,6 +62,13 @@
                 rotation="0 0 0"            
                 scale="0.3 0.3 0.3">              
             </a-gltf-model>
+        </a-entity>
+
+
+        <a-entity mindar-image-target="targetIndex: 5">
+            <a-image src="#saltBG" position="0 0 0.1" width="1.6" height="1.1316" rotation="0 0 0"></a-image>
+            
+            <a-image src="#saltFG" position="0 0 0.2" width="1.4" height="0.9902" rotation="0 0 0"></a-image>
         </a-entity>
 
 
