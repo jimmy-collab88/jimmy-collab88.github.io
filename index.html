@@ -16,6 +16,8 @@
 
     <a-assets>
         <a-asset-item id="squareModel" src="./square.glb"></a-asset-item> 
+        <a-asset-item id="mapGreenModel" src="./map3D/mapgreen.glb"></a-asset-item>
+        <a-asset-item id="mapBlueModel" src="./map3D/mapblue.glb"></a-asset-item>
 
         <img id="bg1" src="./iceflower/background-1.png">
         <img id="bg2" src="./iceflower/background-2.png">
@@ -44,15 +46,10 @@
 
         <a-entity mindar-image-target="targetIndex: 0">
             <a-image src="#bg1" position="0 0 0.10" width="2.0" height="1.6091" rotation="0 0 0"></a-image>
-
             <a-image src="#bg2" position="0 0 0.20" width="1.8" height="1.4482" rotation="0 0 0"></a-image>
-            
             <a-image src="#shadow1" position="0 0 0.30" width="1.6" height="1.2873" rotation="0 0 0"></a-image>
-            
             <a-image src="#shadow2" position="0 0 0.40" width="1.4" height="1.1263" rotation="0 0 0"></a-image>
-
             <a-image src="#main1" position="0 0 0.50" width="1.2" height="0.9654" rotation="0 0 0"></a-image>
-
             <a-image src="#main2" position="0 0 0.60" width="1.0" height="0.8045" rotation="0 0 0"></a-image>
         </a-entity>
 
@@ -65,12 +62,41 @@
                 scale="0.3 0.3 0.3">              
             </a-gltf-model>
         </a-entity>
-
-
+        
         <a-entity mindar-image-target="targetIndex: 5">
             <a-image src="#saltBG" position="0 0 0.1" width="1.2" height="0.882" rotation="0 0 0"></a-image>
             
             <a-image src="#saltFG" position="0 0 0.2" width="1.05" height="0.77175" rotation="0 0 0"></a-image>
+        </a-entity>
+
+
+        <a-entity mindar-image-target="targetIndex: 6">
+            <a-gltf-model 
+                src="#mapGreenModel"         
+                position="0 0 0.1"          
+                rotation="0 0 0"            
+                scale="0.3 0.3 0.3">              
+            </a-gltf-model>
+        </a-entity>
+
+
+        <a-entity mindar-image-target="targetIndex: 7">
+            <a-gltf-model 
+                src="#mapBlueModel"         
+                position="0 0 0.1"          
+                rotation="0 0 0"            
+                scale="0.3 0.3 0.3">              
+            </a-gltf-model>
+        </a-entity>
+
+
+        <a-entity mindar-image-target="targetIndex: 8">
+            <a-gltf-model 
+                src="#mapGreenModel"         
+                position="0 0 0.1"          
+                rotation="0 0 0"            
+                scale="0.3 0.3 0.3">              
+            </a-gltf-model>
         </a-entity>
 
 
