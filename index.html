@@ -14,34 +14,33 @@
 </head>
 <body>
 
+    <a-assets>
+        <a-asset-item id="squareModel" src="./square.glb"></a-asset-item> 
+        <a-asset-item id="mapBrownModel" src="./map3D/mapbrown.glb"></a-asset-item> <a-asset-item id="mapGreenModel" src="./map3D/mapgreen.glb"></a-asset-item>
+        <a-asset-item id="mapBlueModel" src="./map3D/mapblue.glb"></a-asset-item>
+
+        <img id="bg1" src="./iceflower/background-1.png">
+        <img id="bg2" src="./iceflower/background-2.png">
+        <img id="shadow1" src="./iceflower/shadow_effect-1.png">      
+        <img id="shadow2" src="./iceflower/shadow_effect-2.png">      
+        <img id="main1" src="./iceflower/main_character-1.png">
+        <img id="main2" src="./iceflower/main_character-2.png">
+        
+        <img id="saltFG" src="./salt/imagesaltar-1.png">
+        <img id="saltBG" src="./salt/imagesaltar-2.png">
+
+        <img id="contentB" src="./image-b.png"> 
+        <img id="contentC" src="./image-c.png">
+        <img id="contentD" src="./image-d.png">
+        <img id="contentE" src="./image-e.png">
+    </a-assets>
+
     <a-scene 
         mindar-image="imageTargetSrc: ./targets.mind;" 
         color-space="sRGB" 
         renderer="colorManagement: true, physicallyCorrectLights"
         vr-mode-ui="enabled: false" 
         device-orientation-permission-ui="enabled: false">
-        
-        <a-assets>
-            <a-asset-item id="squareModel" src="./square.glb"></a-asset-item> 
-            <a-asset-item id="mapBrownModel" src="./map3D/mapbrown.glb"></a-asset-item>
-            <a-asset-item id="mapGreenModel" src="./map3D/mapgreen.glb"></a-asset-item>
-            <a-asset-item id="mapBlueModel" src="./map3D/mapblue.glb"></a-asset-item>
-
-            <img id="bg1" src="./iceflower/background-1.png">
-            <img id="bg2" src="./iceflower/background-2.png">
-            <img id="shadow1" src="./iceflower/shadow_effect-1.png">      
-            <img id="shadow2" src="./iceflower/shadow_effect-2.png">      
-            <img id="main1" src="./iceflower/main_character-1.png">
-            <img id="main2" src="./iceflower/main_character-2.png">
-            
-            <img id="saltFG" src="./salt/imagesaltar-1.png">
-            <img id="saltBG" src="./salt/imagesaltar-2.png">
-
-            <img id="contentB" src="./image-b.png"> 
-            <img id="contentC" src="./image-c.png">
-            <img id="contentD" src="./image-d.png">
-            <img id="contentE" src="./image-e.png">
-        </a-assets>
 
         <a-camera look-controls="enabled: false"></a-camera>
 
@@ -75,7 +74,7 @@
                 src="#mapBrownModel"         
                 position="0 0 0.1"          
                 rotation="0 0 0"            
-                scale="3 3 3">              
+                scale="0.3 0.3 0.3">              
             </a-gltf-model>
         </a-entity>
 
@@ -85,7 +84,7 @@
                 src="#mapBlueModel"         
                 position="0 0 0.1"          
                 rotation="0 0 0"            
-                scale="3 3 3">              
+                scale="0.3 0.3 0.3">              
             </a-gltf-model>
         </a-entity>
 
@@ -95,7 +94,7 @@
                 src="#mapGreenModel"         
                 position="0 0 0.1"          
                 rotation="0 0 0"            
-                scale="3 3 3">              
+                scale="0.3 0.3 0.3">              
             </a-gltf-model>
         </a-entity>
 
