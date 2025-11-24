@@ -14,33 +14,37 @@
 </head>
 <body>
 
-    <a-assets>
-        <a-asset-item id="squareModel" src="./square.glb"></a-asset-item> 
-        <a-asset-item id="mapbrownModel" src="./map3D/mapbrown.glb"></a-asset-item> <a-asset-item id="mapbreenModel" src="./map3D/mapgreen.glb"></a-asset-item>
-        <a-asset-item id="mapblueModel" src="./map3D/mapblue.glb"></a-asset-item>
-
-        <img id="bg1" src="./iceflower/background-1.png">
-        <img id="bg2" src="./iceflower/background-2.png">
-        <img id="shadow1" src="./iceflower/shadow_effect-1.png">      
-        <img id="shadow2" src="./iceflower/shadow_effect-2.png">      
-        <img id="main1" src="./iceflower/main_character-1.png">
-        <img id="main2" src="./iceflower/main_character-2.png">
-        
-        <img id="saltFG" src="./salt/imagesaltar-1.png">
-        <img id="saltBG" src="./salt/imagesaltar-2.png">
-
-        <img id="contentB" src="./image-b.png"> 
-        <img id="contentC" src="./image-c.png">
-        <img id="contentD" src="./image-d.png">
-        <img id="contentE" src="./image-e.png">
-    </a-assets>
-
     <a-scene 
         mindar-image="imageTargetSrc: ./targets.mind;" 
         color-space="sRGB" 
         renderer="colorManagement: true, physicallyCorrectLights"
         vr-mode-ui="enabled: false" 
         device-orientation-permission-ui="enabled: false">
+        
+        <a-assets>
+            <a-asset-item id="squareModel" src="./square.glb"></a-asset-item> 
+            <a-asset-item id="mapbrownModel" src="./map3D/mapbrown.glb"></a-asset-item>
+            <a-asset-item id="mapgreenModel" src="./map3D/mapgreen.glb"></a-asset-item> 
+            <a-asset-item id="mapblueModel" src="./map3D/mapblue.glb"></a-asset-item>
+
+            <img id="bg1" src="./iceflower/background-1.png">
+            <img id="bg2" src="./iceflower/background-2.png">
+            <img id="shadow1" src="./iceflower/shadow_effect-1.png">      
+            <img id="shadow2" src="./iceflower/shadow_effect-2.png">      
+            <img id="main1" src="./iceflower/main_character-1.png">
+            <img id="main2" src="./iceflower/main_character-2.png">
+            
+            <img id="saltFG" src="./salt/imagesaltar-1.png">
+            <img id="saltBG" src="./salt/imagesaltar-2.png">
+
+            <img id="contentB" src="./image-b.png"> 
+            <img id="contentC" src="./image-c.png">
+            <img id="contentD" src="./image-d.png">
+            <img id="contentE" src="./image-e.png">
+        </a-assets>
+
+        <a-light type="ambient" color="#FFF" intensity="2"></a-light>
+        <a-light type="directional" color="#FFF" intensity="1" position="1 1 1"></a-light>
 
         <a-camera look-controls="enabled: false"></a-camera>
 
@@ -52,7 +56,6 @@
             <a-image src="#main1" position="0 0 0.50" width="1.2" height="0.9654" rotation="0 0 0"></a-image>
             <a-image src="#main2" position="0 0 0.60" width="1.0" height="0.8045" rotation="0 0 0"></a-image>
         </a-entity>
-
 
         <a-entity mindar-image-target="targetIndex: 1">
             <a-gltf-model 
@@ -68,36 +71,32 @@
             <a-image src="#saltFG" position="0 0 0.2" width="1.05" height="0.77175" rotation="0 0 0"></a-image>
         </a-entity>
 
-
         <a-entity mindar-image-target="targetIndex: 6">
             <a-gltf-model 
                 src="#mapbrownModel"         
-                position="0 0 0"          
+                position="0 0 0"            
                 rotation="0 0 0"            
-                scale="0.3 0.3 0.3">              
+                scale="1 1 1">              
             </a-gltf-model>
         </a-entity>
-
 
         <a-entity mindar-image-target="targetIndex: 7">
             <a-gltf-model 
                 src="#mapblueModel"         
-                position="0 0 0"          
+                position="0 0 0"            
                 rotation="0 0 0"            
-                scale="0.3 0.3 0.3">              
+                scale="1 1 1">              
             </a-gltf-model>
         </a-entity>
-
 
         <a-entity mindar-image-target="targetIndex: 8">
             <a-gltf-model 
                 src="#mapgreenModel"         
-                position="0 0 0"          
+                position="0 0 0"            
                 rotation="0 0 0"            
-                scale="0.3 0.3 0.3">              
+                scale="1 1 1">              
             </a-gltf-model>
         </a-entity>
-
 
         <a-entity mindar-image-target="targetIndex: 2">
             <a-image src="#contentC" position="0 0 0.1" width="1.5" height="1.8115"></a-image>
@@ -114,4 +113,3 @@
     </a-scene>
 </body>
 </html>
-
